@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.4</title>
+    <style>
+      .di {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .bkpink,
+      .bkpurple,
+      .bkgreen {
+        display: inline;    
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+      }
+      .bkgreen {
+        background-color: green;
+      }
+      .bkpurple {
+        background-color: purple;
+      }
+      .bkpink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="di">
+      <div class="bkpurple"></div>
+      <div class="bkpink"></div>
+      <div class="bkgreen"></div>
+    </div>
+    <script>
+        // Resize the window to 600x400 pixels after 1 second
+        setTimeout(() => {
+            window.resizeTo(600, 400);
+        }, 1000);
+    </script>
+  </body>
+</html>

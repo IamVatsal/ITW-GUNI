@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extract a-d Characters</title>
+</head>
+<body>
+    <label>Enter a string: <input type="text" id="inputStr"></label>
+    <button onclick="extractChars()">Extract (a-d)</button>
+    <p id="result"></p>
+    <script>
+        function extractChars() {
+            let str = document.getElementById("inputStr").value;
+            // Match all characters between 'a' and 'd' (case-sensitive)
+            let matches = str.match(/[a-d]/g);
+            let result = matches ? matches.join('') : '';
+            document.getElementById("result").textContent = "Extracted: " + result;
+        }
+    </script>
+</body>
+</html>

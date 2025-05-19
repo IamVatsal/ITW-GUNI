@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Password Form</title>
+</head>
+<body>
+    <form id="passwordForm">
+        <label>Old Password: <input type="password" id="oldPwd" required></label><br><br>
+        <label>New Password: <input type="password" id="newPwd" required></label><br><br>
+        <label>Retype New Password: <input type="password" id="retypePwd" required></label><br><br>
+        <button type="submit">Change Password</button>
+    </form>
+    <p id="msg"></p>
+    <script>
+        document.getElementById("passwordForm").onsubmit = function(e) {
+            e.preventDefault();
+            let oldPwd = document.getElementById("oldPwd").value;
+            let newPwd = document.getElementById("newPwd").value;
+            let retypePwd = document.getElementById("retypePwd").value;
+            let msg = document.getElementById("msg");
+
+            if (oldPwd !== "Admin") {
+                msg.textContent = "Old password is incorrect.";
+                msg.style.color = "red";
+            } else if (newPwd !== retypePwd) {
+                msg.textContent = "New passwords do not match.";
+                msg.style.color = "red";
+            } else {
+                msg.textContent = "Password changed successfully!";
+                msg.style.color = "green";
+            }
+        };
+    </script>
+</body>
+</html>

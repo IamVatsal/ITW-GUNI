@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.3</title>
+    <style>
+      .di {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .bkpink,
+      .bkpurple,
+      .bkgreen {
+        display: inline;    
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+      }
+      .bkgreen {
+        background-color: green;
+      }
+      .bkpurple {
+        background-color: purple;
+      }
+      .bkpink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="p1">This Is Example</h1>
+    <div class="di">
+      <div class="bkpurple"></div>
+      <div class="bkpink"></div>
+      <div class="bkgreen"></div>
+    </div>
+    <script>
+        let purple = document.querySelector(".bkpurple");
+        let pink = document.querySelector(".bkpink");
+        let green = document.querySelector(".bkgreen");
+        let p = document.getElementById("p1");
+
+        purple.addEventListener("mouseenter", () => {
+            p.style.color = "purple";
+        });
+        purple.addEventListener("mouseleave", () => {
+            p.style.color = "";
+        });
+
+        pink.addEventListener("mouseenter", () => {
+            p.style.color = "pink";
+        });
+        pink.addEventListener("mouseleave", () => {
+            p.style.color = "";
+        });
+
+        green.addEventListener("mouseenter", () => {
+            p.style.color = "green";
+        });
+        green.addEventListener("mouseleave", () => {
+            p.style.color = "";
+        });
+    </script>
+  </body>
+</html>

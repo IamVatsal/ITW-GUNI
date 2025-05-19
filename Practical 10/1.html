@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Table Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="TableCtrl">
+    <h2>Student Data Table</h2>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Marks</th>
+        </tr>
+        <tr ng-repeat="student in students">
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+            <td>{{student.marks}}</td>
+        </tr>
+    </table>
+    <script>
+        angular.module('myApp', [])
+        .controller('TableCtrl', function($scope) {
+            $scope.students = [
+                { name: 'Alice', roll: 1, marks: 85 },
+                { name: 'Bob', roll: 2, marks: 90 },
+                { name: 'Charlie', roll: 3, marks: 78 }
+            ];
+        });
+    </script>
+</body>
+</html>
